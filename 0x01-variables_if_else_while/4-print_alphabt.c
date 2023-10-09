@@ -12,11 +12,12 @@ int main(void)
 
 	while (a < 123)
 	{
-		if (a != 'e' && a !='q')
+		if (a != 'e' && a != 'q')
 		{
 			putchar(a);
-			a++;
 		}
+
+		a++;
 	}
 
 	putchar('\n');

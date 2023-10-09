@@ -1,10 +1,9 @@
 #include <unistd.h>
 
 /**
+  * main - Entry point - Writes error message to standar error
   *
-  * main - Entry point - Writes error message to stderr
-  *
-  * Return: 1 (Error)
+  * Return: Always 1
   *
   */
 

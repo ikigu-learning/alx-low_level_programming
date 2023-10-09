@@ -11,27 +11,31 @@ int main(void)
 	int n = 48;
 	int m = 49;
 
-	while (n < 58 && m < 58)
+	while (m <= 58)
 	{
+		if (n == 57 && m == 48)
+		{
+			putchar('\n');
+			break;
+		}
+
 		if (n < m && n != m)
 		{
 			putchar(n);
 			putchar(m);
 			putchar(',');
 			putchar(' ');
-			m++;
 		}
 
-		if (m == 57)
+		m++;
+
+		if (m == 58)
 		{
 			m = 48;
 			n++;
 		}
 
-		if (n == 56 && m == 57)
-		{
-			putchar('\n');
-			break;
-		}
 	}
+
+	return (0);
 }

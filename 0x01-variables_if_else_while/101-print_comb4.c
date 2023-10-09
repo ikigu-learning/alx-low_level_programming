@@ -34,7 +34,6 @@ int main(void)
 			p = 48;
 			m++;
 		}
-		
 		else if (p == 57 && m == 57)
 		{
 			p = 48;

@@ -18,11 +18,13 @@ int main(void)
 			putchar(n);
 			putchar(m);
 			putchar(p);
+		
 			if (n == 55)
 			{
 				putchar('\n');
 				break;
 			}
+
 			putchar(',');
 			putchar(' ');
 		}
@@ -39,7 +41,6 @@ int main(void)
 			m = 48;
 			n++;
 		}
-		
 		p++;
 	}
 	return (0);

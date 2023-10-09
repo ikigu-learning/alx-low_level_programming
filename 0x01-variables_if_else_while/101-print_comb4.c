@@ -18,7 +18,7 @@ int main(void)
 			putchar(n);
 			putchar(m);
 			putchar(p);
-		
+
 			if (n == 55)
 			{
 				putchar('\n');
@@ -28,7 +28,7 @@ int main(void)
 			putchar(',');
 			putchar(' ');
 		}
-		
+
 		if (p == 57 && m < 57)
 		{
 			p = 48;

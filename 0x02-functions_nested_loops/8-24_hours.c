@@ -13,6 +13,7 @@ void minutes(int m, int mm, int h, int hh)
 		_putchar(':');
 		_putchar(m);
 		_putchar(mm);
+		_putchar('\n');
 
 		if (mm == 57 && m == 53)
 		{
@@ -76,8 +77,8 @@ void jack_bauer(void)
 {
 	int m = 48;
 	int mm = 48;
-	int h =48;
-	int hh =48;
+	int h = 48;
+	int hh = 48;
 
 	hours(m, mm, h, hh);
 	h++;

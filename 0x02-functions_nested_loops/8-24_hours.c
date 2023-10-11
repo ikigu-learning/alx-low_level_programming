@@ -25,12 +25,12 @@ void jack_bauer(void)
 		{
 			mm++;
 		}
-		else if (mm == 57)
+		else if (mm == 57 && m < 53)
 		{
 			mm = 48;
 			m++;
 		}
-		else if (mm == 57 && m == 53)
+		else if (mm == 57 && m == 53 && hh < 57)
 		{
 			mm = 48;
 			m = 48;

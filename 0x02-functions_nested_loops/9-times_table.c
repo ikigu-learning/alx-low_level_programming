@@ -26,10 +26,15 @@ void times_table(void)
 				_putchar((res) + '0');
 			}
 
+
 			if (d < 9)
 			{
 				_putchar(',');
 				_putchar(' ');
+
+				if (res < 10)
+				{
+					_putchar(' ');
 			}
 			else
 			{

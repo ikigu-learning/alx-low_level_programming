@@ -17,7 +17,8 @@ void minutes(int m, int mm, int h, int hh)
 		_putchar(':');
 		_putchar(m);
 		_putchar(mm);
-		_putchar('\n');
+		_putchar(',');
+		_putchar(' ');
 
 		if (mm == 57 && m == 53)
 		{
@@ -33,6 +34,9 @@ void minutes(int m, int mm, int h, int hh)
 			m++;
 		}
 	}
+	
+	mm = 48;
+	m = 48;
 }
 
 /**
@@ -49,7 +53,7 @@ void hours(int m, int mm, int h, int hh)
 	{
 		minutes(m, mm, h, hh);
 
-		if (hh == 57 && h == 48)
+		if (hh == 48 && h == 50)
 		{
 			break;
 		}
@@ -93,6 +97,9 @@ void jack_bauer(void)
 	int hh = 48;
 
 	hours(m, mm, h, hh);
-	h++;
+	hh = 49;
+	h = 50;
 	hours21_23(m, mm, h, hh);
 }
+
+

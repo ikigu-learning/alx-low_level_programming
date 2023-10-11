@@ -25,7 +25,7 @@ void minutes(int m, int mm, int h, int hh)
 		else if (mm == 57 && m < 54)
 		{
 			mm = 48;
-			m++
+			m++;
 		}
 	}
 }
@@ -38,7 +38,7 @@ void hours(int m, int mm, int h, int hh)
 {
 	while (h < 51)
 	{
-		minutes();
+		minutes(m, mm, h, hh);
 
 		if (hh == 57 && h == 48)
 		{

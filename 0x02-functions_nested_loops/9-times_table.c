@@ -16,31 +16,28 @@ void times_table(void)
 		{
 			res = m * d;
 
-			if (res > 9)
+			if (res > 9 && d < 9))
 			{
 				_putchar((res / 10) + '0');
 				_putchar((res % 10) + '0');
+				_putchar(',');
+				_putchar(' ');
 			}
-			else
+			else if (res > 9 && d > 9))
 			{
 				_putchar((res) + '0');
-			}
-
-			if (d < 9)
-			{
-				if (res < 10)
-				{
-					_putchar(' ');
-				}
 				_putchar(',');
+				_putchar(' ');
 				_putchar(' ');
 			}
 			else
 			{
 				_putchar('\n');
 			}
+
 			d++;
 		}
+
 		m++;
 		d = 0;
 	}

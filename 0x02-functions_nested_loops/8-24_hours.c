@@ -76,10 +76,10 @@ void jack_bauer(void)
 {
 	int m = 48;
 	int mm = 48;
-	int h =48:
+	int h =48;
 	int hh =48;
 
 	hours(m, mm, h, hh);
 	h++;
-	hours21_21(m, mm, h, hh);
+	hours21_23(m, mm, h, hh);
 }

@@ -26,25 +26,20 @@ void times_table(void)
 				_putchar((res) + '0');
 			}
 
-
 			if (d < 9)
 			{
-				_putchar(',');
-				_putchar(' ');
-
 				if (res < 10)
 				{
 					_putchar(' ');
 				}
-			}
+				_putchar(',');
+				_putchar(' ');
 			else
 			{
 				_putchar('\n');
 			}
-
 			d++;
 		}
-
 		m++;
 		d = 0;
 	}

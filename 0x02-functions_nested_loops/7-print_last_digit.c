@@ -10,7 +10,7 @@
 
 int print_last_digit(int n)
 {
-	int retval = _abs(n) % 10:
+	int retval = _abs(n) % 10;
 
 	_putchar(retval + 48);
 

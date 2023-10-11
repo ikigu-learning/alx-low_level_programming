@@ -35,6 +35,7 @@ void times_table(void)
 				if (res < 10)
 				{
 					_putchar(' ');
+				}
 			}
 			else
 			{

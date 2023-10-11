@@ -60,11 +60,11 @@ void hours(int m, int mm, int h, int hh)
   * hourse21_21 - increments hours from 21 to 23
   */
 
-void hours21_23(void)
+void hours21_23(int m, int mm, int h, int hh)
 {
 	while (hh < 52)
 	{
-		minutes();
+		minutes(m, mm, h, hh);
 		hh++;
 	}
 }

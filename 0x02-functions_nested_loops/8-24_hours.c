@@ -66,7 +66,7 @@ void hours(int m, int mm, int h, int hh)
 }
 
 /**
-  * hourse21_23 - increments hours from 21 to 23
+  * hours21_23 - increments hours from 21 to 23
   * @m: first digit in minutes
   * @mm: second digits in minutes
   * @h: first digit in hours

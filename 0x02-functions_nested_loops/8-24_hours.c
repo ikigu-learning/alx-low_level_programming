@@ -17,8 +17,7 @@ void minutes(int m, int mm, int h, int hh)
 		_putchar(':');
 		_putchar(m);
 		_putchar(mm);
-		_putchar(',');
-		_putchar(' ');
+		_putchar('\n');
 
 		if (mm == 57 && m == 53)
 		{
@@ -34,7 +33,7 @@ void minutes(int m, int mm, int h, int hh)
 			m++;
 		}
 	}
-	
+
 	mm = 48;
 	m = 48;
 }

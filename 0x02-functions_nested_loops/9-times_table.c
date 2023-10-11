@@ -23,7 +23,7 @@ void times_table(void)
 			}
 			else
 			{
-				_putchar(res);
+				_putchar((res) + '0');
 			}
 
 			if (d < 9)
@@ -40,6 +40,7 @@ void times_table(void)
 		}
 
 		m++;
+		d = 0;
 	}
 }
 

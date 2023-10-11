@@ -39,7 +39,8 @@ void times_table(void)
 			else
 			{
 				_putchar((res) + '0');
-				_puthchar('\n');
+				_putchar('\n');
+			}
 
 			d++;
 		}

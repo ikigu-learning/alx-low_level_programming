@@ -2,6 +2,10 @@
 
 /**
   * minutes - increments minutes from 00 to 59
+  * @m: first digit in minutes
+  * @mm: second digits in minutes
+  * @h: first digit in hours
+  * @hh: second digit in hours
   */
 
 void minutes(int m, int mm, int h, int hh)
@@ -33,6 +37,10 @@ void minutes(int m, int mm, int h, int hh)
 
 /**
   * hours - increments hours from 00 to 20
+  * @m: first digit in minutes
+  * @mm: second digits in minutes
+  * @h: first digit in hours
+  * @hh: second digit in hours
   */
 
 void hours(int m, int mm, int h, int hh)
@@ -58,7 +66,11 @@ void hours(int m, int mm, int h, int hh)
 }
 
 /**
-  * hourse21_21 - increments hours from 21 to 23
+  * hourse21_23 - increments hours from 21 to 23
+  * @m: first digit in minutes
+  * @mm: second digits in minutes
+  * @h: first digit in hours
+  * @hh: second digit in hours
   */
 
 void hours21_23(int m, int mm, int h, int hh)

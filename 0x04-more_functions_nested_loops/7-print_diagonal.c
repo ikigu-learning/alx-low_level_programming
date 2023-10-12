@@ -38,7 +38,7 @@ void print_diagonal(int n)
 			spaces(x);
 			_putchar('\\');
 			x++;
-			putchar('\n');
+			_putchar('\n');
 		}
 	}
 }

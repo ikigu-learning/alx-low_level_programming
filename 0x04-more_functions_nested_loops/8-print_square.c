@@ -20,7 +20,7 @@ void print_square(int n)
 		{
 			int y = 0;
 
-			while(y < n)
+			while (y < n)
 			{
 				_putchar('#');
 				y++;

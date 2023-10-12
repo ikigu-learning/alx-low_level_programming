@@ -46,7 +46,7 @@ void print_triangle(int n)
 
 	if (n <= 0)
 	{
-		print('\n')
+		print('\n');
 	}
 
 	while (w < n)

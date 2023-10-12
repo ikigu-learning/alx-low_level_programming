@@ -25,7 +25,7 @@ int main(void)
 		}
 		else if (x == 100)
 		{
-			printf("%s ", "Buzz");
+			printf("%s", "Buzz");
 			putchar('\n');
 		}
 		else if (x % 3 == 0)

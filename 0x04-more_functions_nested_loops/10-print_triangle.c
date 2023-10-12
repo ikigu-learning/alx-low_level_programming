@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  * space - prints spaces in a tringle of n length
+  * spaces - prints spaces in a tringle of n length
   * @n: length of triangle
   *
   */

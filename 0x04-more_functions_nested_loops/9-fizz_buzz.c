@@ -1,9 +1,7 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include "main.h"
 
 /**
-  * fizz_buzz - prints 0 to 100
+  * main - prints 0 to 100
   *
   * Description: If a number is divisible by 3,
   * this function prints Fizz.
@@ -11,9 +9,11 @@
   * this function prints Buzz.
   * But if a number is divisible by both 5 and 5,
   * this function prints FizzBuzz
+  *
+  * Return: Always 0 (Success)
   */
 
-void fizz_buzz(void)
+int main(void)
 {
 	int x;
 
@@ -40,4 +40,6 @@ void fizz_buzz(void)
 			printf("%d ", x);
 		}
 	}
+
+	return (0);
 }

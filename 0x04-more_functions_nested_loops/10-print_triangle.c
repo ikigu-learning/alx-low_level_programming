@@ -44,6 +44,11 @@ void print_triangle(int n)
 	int x = 1;
 	int w = 0;
 
+	if (n <= 0)
+	{
+		print('\n')
+	}
+
 	while (w < n)
 	{
 		spaces(n);

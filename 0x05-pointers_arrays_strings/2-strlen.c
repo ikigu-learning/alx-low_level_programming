@@ -9,10 +9,7 @@
 
 int _strlen(char *s)
 {
-	int elem_length = sizeof(char);
-	int arr_length = sizeof(*s) - elem_length;
-
-	int chars = arr_length / elem_length;
+	int chars = sizeof(*s) - sizeof(char);
 
 	return (chars);
 }

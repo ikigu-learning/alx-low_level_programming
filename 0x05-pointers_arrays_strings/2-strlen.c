@@ -9,9 +9,15 @@
 
 int _strlen(char *s)
 {
-	int str[] = *s;
+	int chars = 1;
+	char characters;
+	int counter = 0;
 
-	int chars = sizeof(str) - sizeof(char);
+	while (characters != '\0')
+	{
+		characters = *s + counter;
+		chars++;
+	}
 
 	return (chars);
 }

@@ -38,7 +38,7 @@ void _puts2(char *str)
 {
 	int counter = 0;
 	char character;
-	int length = _strlen - 1;
+	int length = _strlen(str) - 1;
 
 	while (counter < length)
 	{
@@ -50,7 +50,7 @@ void _puts2(char *str)
 		}
 
 		_putchar(character);
-		counter + 2;
+		counter = counter + 2;
 	}
 
 	_putchar('\n');

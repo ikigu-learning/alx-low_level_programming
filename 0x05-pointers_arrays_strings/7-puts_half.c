@@ -66,7 +66,7 @@ void puts_half(char *str)
 	if ((length % 2) != 0)
 	{
 		int start_index = (length - 1) / 2;
-		char character;
+		char character = 'x';
 
 		start_index++;
 
@@ -76,7 +76,7 @@ void puts_half(char *str)
 	else
 	{
 		int start_index = length / 2;
-		char character;
+		char character = 'x';
 
 		putsc(start_index, character, str);
 		_putchar('\n');

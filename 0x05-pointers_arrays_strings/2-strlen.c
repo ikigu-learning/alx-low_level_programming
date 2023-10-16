@@ -15,6 +15,12 @@ int _strlen(char *s)
 	while (characters != '\0')
 	{
 		characters = *(s + chars);
+
+		if (characters == '\0')
+		{
+			break;
+		}
+
 		chars++;
 	}
 

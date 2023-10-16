@@ -28,9 +28,10 @@ int _strlen(char *s)
 }
 
 /**
-  * putsc - prints chars
+  * putsc - prints chars of a string
   * @start_index: index to start printing at
   * @character: char to print
+  * @str: string whose chars are getting printed
   *
   * Return: Nothing
   */

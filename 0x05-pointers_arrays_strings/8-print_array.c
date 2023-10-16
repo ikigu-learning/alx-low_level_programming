@@ -14,7 +14,7 @@ void print_array(int *a, int n)
 	int counter = 0;
 	int integer_to_print;
 
-	while (n < counter)
+	while (n > counter)
 	{
 		integer_to_print = *(a + counter);
 

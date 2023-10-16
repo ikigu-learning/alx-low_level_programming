@@ -38,7 +38,7 @@ void puts2(char *str)
 {
 	int counter = 0;
 	char character;
-	int length = _strlen(str) - 1;
+	int length = _strlen(str);
 
 	while (counter < length)
 	{

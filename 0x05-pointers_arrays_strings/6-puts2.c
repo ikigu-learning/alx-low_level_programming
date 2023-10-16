@@ -28,13 +28,13 @@ int _strlen(char *s)
 }
 
 /**
-  * _puts2 - prints every other character of str to stdout
+  * puts2 - prints every other character of str to stdout
   * @str: the string to print
   *
   * Return: Nothing
   */
 
-void _puts2(char *str)
+void puts2(char *str)
 {
 	int counter = 0;
 	char character;

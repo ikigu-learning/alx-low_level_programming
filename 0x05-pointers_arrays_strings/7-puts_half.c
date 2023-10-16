@@ -28,14 +28,14 @@ int _strlen(char *s)
 }
 
 /**
-  * puts - prints chars
+  * putsc - prints chars
   * @start_index: index to start printing at
   * @character: char to print
   *
   * Return: Nothing
   */
 
-void puts(int start_index, char character)
+void putsc(int start_index, char character, char *str)
 {
 	while (character != '\0')
 	{
@@ -70,7 +70,7 @@ void puts_half(char *str)
 
 		start_index++;
 
-		puts(start_index, character);
+		putsc(start_index, character, str);
 		_putchar('\n');
 	}
 	else
@@ -78,7 +78,7 @@ void puts_half(char *str)
 		int start_index = length / 2;
 		char character;
 
-		puts(start_index, character);
+		putsc(start_index, character, str);
 		_putchar('\n');
 	}
 }

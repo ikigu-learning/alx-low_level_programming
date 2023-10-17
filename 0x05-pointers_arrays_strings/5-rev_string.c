@@ -27,7 +27,6 @@ int _strlen(char *s)
 	return (chars);
 }
 /**
-  *
   * rev_string - reverses a string in memory
   * @s: The string to reverse
   *
@@ -42,7 +41,7 @@ void rev_string(char *s)
 	while (i < j)
 	{
 		char b = *(s + i);
-		char e = *(s +j );
+		char e = *(s + j);
 
 		if (i == j || i > j)
 		{

@@ -41,13 +41,13 @@ void rev_string(char *s)
 
 	while (i < j)
 	{
+		char b = *(s + i);
+		char e = *(s +j );
+
 		if (i == j || i > j)
 		{
 			break;
 		}
-
-		char b = *(s + i);
-		char e = *(s + j);
 
 		*(s + i) = e;
 		*(s + j) = b;

@@ -46,11 +46,11 @@ void rev_string(char *s)
 			break;
 		}
 
-		char s = *(s + i);
+		char b = *(s + i);
 		char e = *(s + j);
 
 		*(s + i) = e;
-		*(s + j) = s;
+		*(s + j) = b;
 
 		i++;
 		j--;

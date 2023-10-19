@@ -1,3 +1,11 @@
+/**
+  * reverse_array - reverses an array of integers
+  * @a: array to reverse
+  * @n: length of array a
+  *
+  * Return: Nothing
+  */
+
 void reverse_array(int *a, int n)
 {
 	int i = 0;

@@ -39,7 +39,6 @@ int _strlen(char *s)
 char *_strncat(char *dest, char *src, int n)
 {
 	int d = _strlen(dest);
-	int s = _strlen(src);
 	int z = 0;
 
 	while (n > z)

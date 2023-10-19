@@ -9,7 +9,7 @@ char *string_toupper(char *x)
 {
 	int j = 0;
 
-	while(x[j] != '\0')
+	while (x[j] != '\0')
 	{
 		if (x[j] > 96 && x[j] < 123)
 		{

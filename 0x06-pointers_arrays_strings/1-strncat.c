@@ -41,12 +41,14 @@ char *_strncat(char *dest, char *src, int n)
 	int d = _strlen(dest);
 	int z = 0;
 
-	while (n > z)
+	while (n > z && *(src + z) != '\0')
 	{
 		*(dest + d) = *(src + z);
 		z++;
 		d++;
 	}
+
+	*(dest + d) = '\0';
 
 	return (dest);
 }

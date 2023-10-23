@@ -1,4 +1,5 @@
 #include "main.h"
+#include "4-strpbrk.c"
 
 /**
   * _strstr - locates a substring

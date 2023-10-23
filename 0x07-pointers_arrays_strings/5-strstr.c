@@ -1,4 +1,5 @@
 #include "main.h"
+#include "2-strchr.c"
 #include "4-strpbrk.c"
 
 /**
@@ -12,5 +13,18 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	return (_strpbrk(haystack, needle));
+	char *start = (_strchr(haystack, needle[0]));
+	int i = 0;
+
+	while (needle[i] != '\0')
+	{
+		if (needle[i] != start[i])
+		{
+			return (0);
+		}
+
+		i++;
+	}
+
+	return (start);
 }

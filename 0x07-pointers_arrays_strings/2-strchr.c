@@ -19,11 +19,8 @@ char *_strchr(char *s, char c)
 			return (s + i);
 		}
 
-		if (i == _strlen(s)_)
-		{
-			return (NULL);
-		}
-
 		i++;
 	}
+
+	return (NULL);
 }

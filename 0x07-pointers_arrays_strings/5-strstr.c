@@ -16,15 +16,21 @@ char *_strstr(char *haystack, char *needle)
 	char *start = (_strchr(haystack, needle[0]));
 	int i = 0;
 
-	while (needle[i] != '\0')
+	if (start != 0)
 	{
-		if (needle[i] != start[i])
+
+		while (needle[i] != '\0')
 		{
-			return (0);
+			if (needle[i] != start[i])
+			{
+				return (0);
+			}
+
+			i++;
 		}
 
-		i++;
+		return (start);
 	}
 
-	return (start);
+	return (0);
 }

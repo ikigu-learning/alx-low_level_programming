@@ -1,6 +1,5 @@
 #include "main.h"
 #include "2-strchr.c"
-#include "4-strpbrk.c"
 
 /**
   * _strstr - locates a substring
@@ -13,13 +12,13 @@
 
 char *_strstr(char *haystack, char *needle)
 {
+	char *start = (_strchr(haystack, needle[0]));
+	int i = 0;
+
 	if (haystack[0] == '\0')
 	{
 		return (0);
 	}
-
-	char *start = (_strchr(haystack, needle[0]));
-	int i = 0;
 
 	if (start != 0)
 	{

@@ -13,6 +13,11 @@
 
 char *_strstr(char *haystack, char *needle)
 {
+	if (haystack[0] == '\0')
+	{
+		return (0);
+	}
+
 	char *start = (_strchr(haystack, needle[0]));
 	int i = 0;
 
@@ -23,14 +28,13 @@ char *_strstr(char *haystack, char *needle)
 		{
 			if (needle[i] != start[i])
 			{
-				return (0);
+				haystack = start + 1;
+				return (_strstr(haystack, needle));
 			}
 
 			i++;
 		}
-
-		return (start);
 	}
 
-	return (0);
+	return (start);
 }

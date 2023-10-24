@@ -20,6 +20,11 @@ char *_strstr(char *haystack, char *needle)
 		return (0);
 	}
 
+	if (needle[0] == '\0')
+	{
+		return (haystack);
+	}
+
 	if (start != 0)
 	{
 

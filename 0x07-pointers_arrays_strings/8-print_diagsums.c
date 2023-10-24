@@ -20,6 +20,7 @@ void print_diagsums(int *a, int size)
 	{
 		sum_diag1 += *(a + (size * i + i));
 		sum_diag2 += *(a + (i + size - 1 - i));
+		i++;
 	}
 
 	printf("%d, %d\n", sum_diag1, sum_diag2);

@@ -3,7 +3,8 @@
 
 /**
   * main - entry to program
-  * @argv - array containing arguments passed to program
+  * @argc: count of args to main
+  * @argv: array containing args passed to program
   *
   * Return: Always 0(Success)
   */

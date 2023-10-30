@@ -71,13 +71,13 @@ char *_strdup(char *str)
 	char *dest;
 
 	size = _strlen(str);
-	dest = malloc(sizeof(char) * size);
+	dest = malloc((sizeof(char) * size) + 1);
 
-	if (!str)
+	if (size == 0)
 	{
 		return (0);
 	}
-	
+
 	if (!dest)
 	{
 		return (0);

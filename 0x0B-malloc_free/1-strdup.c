@@ -75,7 +75,7 @@ char *_strdup(char *str)
 
 	if (!str)
 	{
-		return (NULL);
+		return (0);
 	}
 
 	if (!dest)

@@ -108,7 +108,7 @@ char *str_concat(char *s1, char *s2)
 	}
 
 	src = _strncat(s1, s2, _strlen(s2));
-	_strncpy(ret, src, strlen(src));
+	_strncpy(ret, src, _strlen(src));
 
 	return (ret);
 }

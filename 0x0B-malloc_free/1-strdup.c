@@ -11,4 +11,23 @@
 
 char *_strdup(char *str)
 {
+	int size;
+	char *dest;
 
+	size = _strlen(str);
+	dest = malloc(sizeof(char) * size);
+
+	if (!str)
+	{
+		return (0);
+	}
+	
+	if (!dest)
+	{
+		return (0);
+	}
+
+	_strncpy(dest, str, size);
+
+	return (dest);
+}

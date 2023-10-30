@@ -76,7 +76,7 @@ char *str_concat(char *s1, char *s2)
 		return (0);
 	}
 
-	ret = _strncat(s1, s2);
+	ret = _strncat(s1, s2, _strlen(s2));
 
 	return (ret);
 }

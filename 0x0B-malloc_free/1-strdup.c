@@ -73,7 +73,7 @@ char *_strdup(char *str)
 	size = _strlen(str);
 	dest = malloc((sizeof(char) * size) + 1);
 
-	if (str == NULL)
+	if (!str)
 	{
 		return (NULL);
 	}

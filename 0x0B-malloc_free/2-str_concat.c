@@ -23,7 +23,7 @@ char *str_concat(char *s1, char *s2)
 	}
 
 	_strncpy(ret, s1, _strlen(s1));
-	_strncpy(ret[_strlen(s1)], s2, _strlen(s2));
+	_strncpy(ret + _strlen(s1), s2, _strlen(s2));
 	ret[size] = '\0';
 
 	return (ret);

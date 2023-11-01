@@ -33,7 +33,6 @@ int _strlen(char *s)
  * @av: an array of strings to copy to location str
  * @str: place to copy strings in av to
  * @k: helper variable
- * @size: size of memory to allocate
  * @ac: number of strings to copy to str
  *
  * Return: Nothing
@@ -89,7 +88,7 @@ char *argstostr(int ac, char **av)
 		size += _strlen(av[i]) + 1;
 	}
 
-	str = (char *)malloc(sizeof(char) * size);
+	str = (char *)malloc((sizeof(char) * size) + 1);
 
 	if (!str)
 	{

@@ -29,33 +29,19 @@ int _strlen(char *s)
 }
 
 /**
-  * argstostr - concatenates the arguments of a program
-  * @ac: the number of args passed to the program
-  * @av: an array containing the args to the program
-  *
-  * Return: a pointer to the concatenated string,
-  * NULL if ac or av == 0
-  */
+ * copy_str - copies a string
+ * @av: an array of strings to copy to location str
+ * @str: place to copy strings in av to
+ * @k: helper variable
+ * @size: size of memory to allocate
+ * @ac: number of strings to copy to str
+ *
+ * Return: Nothing
+ */
 
-char *argstostr(int ac, char **av)
+void copy_str(char **av, char *str, int k, int ac)
 {
-	int sum, i, j, k;
-	char *str;
-
-	sum = 0;
-
-	if (ac == 0 || av == NULL)
-	{
-		return (NULL);
-	}
-
-	for (i = 0; i < ac; i++)
-	{
-		sum += _strlen(av[i]) + 1;
-	}
-
-	str = (char *)malloc(sizeof(char) * sum);
-	k = 0;
+	int j, i;
 
 	for (i = 0; i < ac; i++)
 	{
@@ -73,9 +59,44 @@ char *argstostr(int ac, char **av)
 			str[k] = '\n';
 			k++;
 		}
-
-		str[sum] = '\n';
 	}
+}
+
+/**
+  * argstostr - concatenates the arguments of a program
+  * @ac: the number of args passed to the program
+  * @av: an array containing the args to the program
+  *
+  * Return: a pointer to the concatenated string,
+  * NULL if ac or av == 0
+  */
+
+char *argstostr(int ac, char **av)
+{
+	int size, i, k;
+	char *str;
+
+	size = 0;
+	k = 0;
+
+	if (ac == 0 || av == NULL)
+	{
+		return (NULL);
+	}
+
+	for (i = 0; i < ac; i++)
+	{
+		size += _strlen(av[i]) + 1;
+	}
+
+	str = (char *)malloc(sizeof(char) * size);
+
+	if (!str)
+	{
+		return (0);
+	}
+
+	copy_str(av, str, k, ac);
 
 	return (str);
 }

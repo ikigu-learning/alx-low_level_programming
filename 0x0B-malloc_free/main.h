@@ -13,3 +13,4 @@ char *string_toupper(char *x);
 char *leet(char *x);
 char *cap_string(char *s);
 int _strlen(char *s);
+char *argstostr(int ac, char **av);

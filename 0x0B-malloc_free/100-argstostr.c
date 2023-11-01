@@ -49,7 +49,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		sum += _strlen(av[i]) + 1;
 	}
@@ -57,7 +57,7 @@ char *argstostr(int ac, char **av)
 	str = (char *)malloc(sizeof(char) * sum);
 	k = 0;
 
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		j = 0;
 
@@ -79,4 +79,3 @@ char *argstostr(int ac, char **av)
 
 	return (str);
 }
-

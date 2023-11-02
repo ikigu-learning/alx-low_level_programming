@@ -98,7 +98,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n >= l2)
 	{
 		size = l1 + l2;
-		n = l2; // number of characters to copy changes to length of string 2
+		n = l2;
 	}
 
 	pr = malloc(sizeof(char) * size);

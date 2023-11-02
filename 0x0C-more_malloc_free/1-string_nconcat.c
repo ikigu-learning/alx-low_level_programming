@@ -46,7 +46,7 @@ void copy_string(char *pr, char *s1, char *s2, unsigned int l1, unsigned int n)
 	i = 0;
 	j = 0;
 
-	while (i < (l1 - 1))
+	while (i < (l1))
 	{
 		pr[i] = s1[j];
 		i++;
@@ -91,7 +91,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	l1 = _strlen(s1); 
+	l1 = _strlen(s1);
 	l2 = _strlen(s2) + 1;
 	size = l1 + n + 1;
 

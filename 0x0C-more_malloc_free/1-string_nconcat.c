@@ -46,7 +46,7 @@ void copy_string(char *pr, char *s1, char *s2, unsigned int l1, unsigned int n)
 	i = 0;
 	j = 0;
 
-	while (i < (l1 - 1))
+	while (i < l1)
 	{
 		pr[i] = s1[j];
 		i++;

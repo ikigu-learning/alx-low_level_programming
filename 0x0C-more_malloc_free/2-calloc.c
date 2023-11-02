@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
   * _calloc - allocates memory for nmemb blocks,
@@ -12,15 +13,14 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int *ptr;
-	unsigned int i;
+	char out;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	output = calloc(nmemb, size);
-	if (output == NULL)
+	out = calloc(nmemb, size);
+	if (out == NULL)
 		return (NULL);
 	else
-		return (output);
+		return (out);
 }

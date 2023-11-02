@@ -61,8 +61,6 @@ void copy_string(char *ptr, char *s1, char *s2, unsigned int length_s1, unsigned
 		i++;
 		j++;
 	}
-
-	ptr[i] = '\0';
 }
 
 

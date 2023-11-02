@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
   * _strlen - calculates the length of a string
@@ -47,7 +46,7 @@ void copy_string(char *ptr, char *s1, char *s2, unsigned int length_s1, unsigned
 	i = 0;
 	j = 0;
 
-	while (i < length_s1)
+	while (i < (length_s1 - 1))
 	{
 		ptr[i] = s1[j];
 		i++;
@@ -59,8 +58,6 @@ void copy_string(char *ptr, char *s1, char *s2, unsigned int length_s1, unsigned
 	while (j < n)
 	{
 		ptr[i] = s2[j];
-		printf("char in ptr: %c\n", ptr[i]);
-		printf("char in s2: %c\n", s2[j]);
 		i++;
 		j++;
 	}

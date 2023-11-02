@@ -30,25 +30,25 @@ int _strlen(char *s)
 
 /**
   * copy_string - copies s1 and s2 to a mem location
-  * @ptr: location to copy string to
+  * @pr: location to copy string to
   * @s1: first string to copy
   * @s2: second string to copy
-  * @length_s1: length of s1
+  * @l1: length of s1
   * @n: limit of bytes to copy from s2
   *
   * Return: Nothing
   */
 
-void copy_string(char *ptr, char *s1, char *s2, unsigned int length_s1, unsigned int n)
+void copy_string(char *pr, char *s1, char *s2, unsigned int l1, unsigned int n)
 {
 	unsigned int i, j;
 
 	i = 0;
 	j = 0;
 
-	while (i < (length_s1 - 1))
+	while (i < (l1 - 1))
 	{
-		ptr[i] = s1[j];
+		pr[i] = s1[j];
 		i++;
 		j++;
 	}
@@ -57,12 +57,12 @@ void copy_string(char *ptr, char *s1, char *s2, unsigned int length_s1, unsigned
 
 	while (j < n)
 	{
-		ptr[i] = s2[j];
+		pr[i] = s2[j];
 		i++;
 		j++;
 	}
 
-	ptr[i] = '\0';
+	pr[i] = '\0';
 }
 
 
@@ -72,6 +72,7 @@ void copy_string(char *ptr, char *s1, char *s2, unsigned int length_s1, unsigned
   * and n bytes of s2
   * @s1: first string
   * @s2: string to add to s1
+  * @n: number of chars to copy from s2
   *
   * Return: pointer to allocated memory,
   * or NULL if allocation fails
@@ -79,9 +80,10 @@ void copy_string(char *ptr, char *s1, char *s2, unsigned int length_s1, unsigned
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *ptr;
+	char *pr;
 	size_t size;
-	unsigned int length_s1, length_s2;
+	int l1;
+	unsigned int l2;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -89,23 +91,23 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	length_s1 = _strlen(s1) + 1;
-	length_s2 = _strlen(s2) + 1;
-	size = length_s1 + n + 1;
+	l1 = _strlen(s1) + 1;
+	l2 = _strlen(s2) + 1;
+	size = l1 + n + 1;
 
-	if (n >= length_s2)
+	if (n >= l2)
 	{
-		size = length_s1 + length_s2;
-		n = length_s2;
+		size = l1 + l2;
+		n = l2;
 	}
 
-	ptr = malloc(sizeof(char) * size);
+	pr = malloc(sizeof(char) * size);
 
-	if (!ptr)
+	if (!pr)
 		return (NULL);
 
-	copy_string(ptr, s1, s2, length_s1, n);
+	copy_string(pr, s1, s2, l1, n);
 
-	return (ptr);
+	return (pr);
 }
 

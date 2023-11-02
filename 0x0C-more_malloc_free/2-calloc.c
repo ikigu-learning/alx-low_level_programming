@@ -18,13 +18,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	ptr = calloc(nmemb, size);
-
-	if (!ptr)
+	output = calloc(nmemb, size);
+	if (output == NULL)
 		return (NULL);
-
-	for (i = 0; i < nmemb; i++)
-		ptr[i] = 0;
-
-	return ((void *) ptr);
+	else
+		return (output);
 }

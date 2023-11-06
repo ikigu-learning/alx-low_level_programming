@@ -2,10 +2,12 @@
 #define DOG_H
 
 /**
-  * struct dog - declares a dog struct
+  * struct dog - Declares a dog struct
   * @name: name of dog
   * @age: age of dog
   * @owner: dog's owner
+  * 
+  * Description: Defines dog members
   */
 
 struct dog

@@ -75,12 +75,12 @@ char *_strdup(char *str)
 
 	if (!str)
 	{
-		return (0);
+		return (NULL);
 	}
 
 	if (!dest)
 	{
-		return (0);
+		return (NULL);
 	}
 
 	_strncpy(dest, str, size);

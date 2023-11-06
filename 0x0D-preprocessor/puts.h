@@ -10,7 +10,7 @@
 void _puts(char *str)
 {
 	int counter = 0;
-	char character;
+	char character = 'v';
 
 	while (character != '\0')
 	{

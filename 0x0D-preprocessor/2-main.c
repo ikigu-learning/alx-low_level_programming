@@ -1,4 +1,4 @@
-#include "3-puts.c"
+#include "puts.h"
 
 int main(void)
 {

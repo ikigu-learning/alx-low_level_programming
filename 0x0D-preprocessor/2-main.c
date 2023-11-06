@@ -1,8 +1,8 @@
-#include <stdio.h>
+#include "3-puts.c"
 
 int main(void)
 {
-	printf("%s\n", __FILE__);
+	_puts(__FILE__);
 
 	return (0);
 }

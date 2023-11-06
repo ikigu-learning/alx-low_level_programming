@@ -1,7 +1,4 @@
-#ifndef PUTS_H
-#define PUTS_H
 #include "puts.h"
-#endif
 
 int main(void)
 {

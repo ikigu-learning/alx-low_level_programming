@@ -1,6 +1,13 @@
 #include <stdlib.h>
 #include "3-calc.h"
 
+/**
+  * get_op_func - determines which function to use
+  * @s: the operand that determines function
+  *
+  * Return: pointer to function
+  */
+
 int (*get_op_func(char *s))(int, int)
 {
 	int i;

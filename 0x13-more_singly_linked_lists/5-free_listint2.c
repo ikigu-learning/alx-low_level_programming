@@ -12,18 +12,19 @@
 
 void free_listint2(listint_t **head)
 {
-	/*store current mem address*/
+	/* make copy of head is*/
 
-	listint_t *ptr = *head;
-	listint_t *ptr_cpy = NULL;
+	/* Change head to the next pointer */
 
-	while (ptr)
+	/* free copy of head */
+
+	listint_t *ptr;
+
+	while (head)
 	{
-		ptr_cpy = ptr;
-
+		ptr = *head;
+		head = (*head)->next;
 		free(ptr);
-
-		ptr = ptr_cpy->next;
 	}
 
 	*head = NULL;

@@ -14,14 +14,9 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *ptr = *head;
 	list_t *new_node = malloc(sizeof(list_t));
-	char *s = malloc(sizeof(str));
+	char *s = strdup(str);
 
 	if (!s || !new_node)
-		return (NULL);
-
-	s = strdup(str);
-
-	if (!s)
 		return (NULL);
 
 	new_node->str = s;

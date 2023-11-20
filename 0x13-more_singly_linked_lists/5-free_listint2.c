@@ -12,13 +12,19 @@
 
 void free_listint2(listint_t **head)
 {
-	if (!(*head))
+	/*store current mem address*/
+
+	listint_t *ptr = *head;
+	listint_t *ptr_cpy = NULL;
+
+	while (ptr)
 	{
-		*head = NULL;
-		return;
+		ptr_cpy = ptr;
+
+		free(ptr);
+
+		ptr = ptr_cpy->next;
 	}
 
-	free_listint((*head)->next);
-
-	free(*head);
+	*head = NULL;
 }

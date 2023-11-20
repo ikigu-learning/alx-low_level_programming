@@ -5,18 +5,30 @@ In this project, I tackle the ALX linked lists tasks. This is in my efforts to l
 ## The structure of my linked lists
 
 ```c
-typedef struct list_s
+/**
+ * struct listint_s - singly linked list
+ * @n: integer
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
+ *
+ */
+typedef struct listint_s
 {
-    char *str;
-    unsigned int len;
-    struct list_s *next;
-} list_t;
+    int n;
+    struct listint_s *next;
+} listint_t;
 ```
 
-## These are the functions contained in the project's files:
+## These are what the functions in the project's files do:
 
-1. **0-print_list.c**: a function that prints all the elements of a `list_t` list.
-2. **1-list_len.c**: a function that returns the number of elements in a linked `list_t` list.
-3. **2-add_node.c**: a function that adds a new node at the beginning of a `list_t` list.
-4. **3-add_node_end.c**: a function that adds a new node at the end of a `list_t` list.
-5. **4-free_list.c**: a function that frees a `list_t` list
+1. **0-print_listint.c**: prints all elements of a `listint_t` list.
+2. **1-listint_len.c**: returns the number of elements in a linked `listint_t` list.
+3. **2-add_nodeint.c**: adds a new node at the beginning of a `listint_t` list.
+4. **3-add_nodeint_end.c**:adds a new node at the end of a `listint_t` list.
+5. **4-free_listint.c**: frees a `listint_t` list.
+6. **5-free_listint2.c**: frees a `listint_t` list and sets its _head_ to null.
+7. **6-pop_listint.c**: deletes the head node of a `listint_t` list and returns the head node's data(n).
+8. **7-get_nodeint.c**: returns the nth node of a `listint_t` list.
+9. **8-sum_listint.c**: returns the sum of all the data (n) of a `listint_t` list.
+10. **9-insert_nodeint.c**: inserts a new node at a given position.

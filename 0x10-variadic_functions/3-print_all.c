@@ -38,7 +38,8 @@ void print_all(const char *const format, ...)
 				if (abc == NULL)
 					abc = "(nil)";
 				printf("%s", abc);
-					break;
+				j = 0;
+				break;
 			default:
 				j = 1;
 				break;

@@ -4,19 +4,16 @@ In this project, I tackle the ALX linked lists tasks. This is in my efforts to l
 
 ## The structure of my linked lists
 
-`typedef struct list_s
-
+````c
+typedef struct list_s
 {
-
     char *str;
-
     unsigned int len;
-
     struct list_s *next;
-
 }
 
-list_t;`
+list_t;
+```
 
 ## These are the functions contained in the project's files:
 
@@ -25,3 +22,4 @@ list_t;`
 3. **2-add_node.c**: a function that adds a new node at the beginning of a `list_t` list.
 4. **3-add_node_end.c**: a function that adds a new node at the end of a `list_t` list.
 5. **4-free_list.c**: a function that frees a `list_t` list
+````

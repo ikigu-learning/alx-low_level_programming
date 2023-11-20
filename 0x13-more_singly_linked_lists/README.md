@@ -1,6 +1,6 @@
 # Linked Lists
 
-In this project, I tackle the ALX linked lists tasks. This is in my efforts to learn low-level-programming in C.
+In this project, I tackle the ALX singly-linked lists problems. This is in my efforts to learn low-level-programming in C.
 
 ## The structure of my linked lists
 
@@ -11,7 +11,6 @@ In this project, I tackle the ALX linked lists tasks. This is in my efforts to l
  * @next: points to the next node
  *
  * Description: singly linked list node structure
- *
  */
 typedef struct listint_s
 {

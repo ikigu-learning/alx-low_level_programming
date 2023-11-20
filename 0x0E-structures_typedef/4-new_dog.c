@@ -16,15 +16,13 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *doggo = malloc(sizeof(dog_t));
-	
-	//checks for malloc failure, terminates function call
+
 	if (!doggo)
 		return (NULL);
 
 	doggo->name = strdup(name);
 
-	//checks failure of malloc in strdup, frees mem and returns
-	if (!doggo->name)
+	if (!(doggo->name))
 	{
 		free(doggo);
 		return (NULL);
@@ -33,8 +31,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	doggo->age = age;
 	doggo->owner = strdup(owner);
 
-	//checks failure of malloc in strdup, frees mem and returns
-	if (!doggo->owner)
+	if (!(doggo->owner))
 	{
 		free(doggo->name);
 		free(doggo);

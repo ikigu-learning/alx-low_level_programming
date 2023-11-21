@@ -2,5 +2,6 @@
   "files.associations": {
     "*.ejs": "html",
     "lists.h": "c"
-  }
+  },
+  "editor.insertSpaces": false
 }

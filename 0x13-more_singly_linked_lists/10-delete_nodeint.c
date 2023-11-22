@@ -16,10 +16,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	unsigned int count;
 
 	if (!(*head))
-	{
-		printf("Head is null\n");
 		return (-1);
-	}
+
 	if (index == 0)
 	{
 		current = *head;
@@ -33,8 +31,6 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 		while (ptr)
 		{
-			printf("count: %u\n\n", count);
-
 			if (count == (index - 1))
 			{
 				to_delete = ptr->next;

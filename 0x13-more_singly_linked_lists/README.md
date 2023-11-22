@@ -32,3 +32,8 @@ typedef struct listint_s
 9. **8-sum_listint.c**: returns the sum of all the data (n) of a `listint_t` list.
 10. **9-insert_nodeint.c**: inserts a new node at a given position.
 11. **100-reverse_listint.c**: reverses a list with a single loop.
+12. **101-print_listint_safe.c**: prints a listint_t linked list.
+    - Returns: the number of nodes in the list
+    - This function can print lists with a loop
+    - You should go through the list only once
+    - If the function fails, exit the program with status 98

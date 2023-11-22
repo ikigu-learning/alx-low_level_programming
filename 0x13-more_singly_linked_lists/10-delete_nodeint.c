@@ -42,7 +42,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 			count++;
 			ptr = ptr->next;
 		}
-
-		return (1);
 	}
+
+	return (1);
 }

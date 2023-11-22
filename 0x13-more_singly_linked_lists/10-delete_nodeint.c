@@ -36,14 +36,12 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 				ptr->next = ptr->next->next;
 				free(to_delete);
 
-				break;
+				return (1);
 			}
 
 			count++;
 			ptr = ptr->next;
 		}
-
-		return (1);
 	}
 
 	return (-1);

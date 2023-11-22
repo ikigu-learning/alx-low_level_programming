@@ -31,3 +31,4 @@ typedef struct listint_s
 8. **7-get_nodeint.c**: returns the nth node of a `listint_t` list.
 9. **8-sum_listint.c**: returns the sum of all the data (n) of a `listint_t` list.
 10. **9-insert_nodeint.c**: inserts a new node at a given position.
+11. **100-reverse_listint.c**: reverses a list with a single loop.

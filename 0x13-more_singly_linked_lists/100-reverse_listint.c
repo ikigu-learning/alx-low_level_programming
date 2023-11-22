@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -12,6 +11,9 @@
 listint_t *reverse_listint(listint_t **head)
 {
 	listint_t *previous_node, *current_next;
+
+	if (*head == NULL || (*head)->next == NULL)
+		return (*head);
 
 	current_next = (*head)->next;
 	previous_node = *head;

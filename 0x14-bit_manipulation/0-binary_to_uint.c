@@ -77,6 +77,9 @@ unsigned int binary_to_uint(const char *b)
 
 	char *s, *d;
 
+	if (!b)
+		return (0);
+
 	d = malloc(sizeof(char) * (strlen(b) + 1));
 
 	if (!d)
@@ -87,9 +90,6 @@ unsigned int binary_to_uint(const char *b)
 	uint = 0;
 
 	s = strcpy(d, b);
-
-	if (!b)
-		return (0);
 
 	rev_string(s);
 

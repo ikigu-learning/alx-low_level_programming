@@ -69,9 +69,13 @@ void cp(char *file_from, char *file_to)
 		handle_read_error(file_from);
 
 	fd_from = open(file_from, O_RDONLY);
+
+	if (fd_from == -1)
+		handle_read_error(file_from);
+
 	fd_to = open(file_to, O_RDWR | O_TRUNC | O_CREAT, 0664);
 
-	if (!fd_to)
+	if (fd_to == -1)
 		handle_write_error(file_to);
 
 	bytes_read = 1UL;

@@ -14,4 +14,10 @@ int append_text_to_file(const char *filename, char *text_content);
 
 void cp(char *file_from, char *file_to);
 
+void check_file_close_fail(int *close, int *fd);
+
+void handle_write_error(char *filename);
+
+void handle_read_error(char *filename);
+
 #endif

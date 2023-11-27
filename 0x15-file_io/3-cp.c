@@ -65,6 +65,8 @@ void cp(char *file_from, char *file_to)
 	ssize_t bytes_read, bytes_written;
 	char buffer[1024];
 
+	mode_t permissions = S_IRUSR | S_IWUSR | S_IWGRP | S_IRGRP | S_IROTH;
+
 	if (!file_from)
 		handle_read_error(file_from);
 
@@ -73,7 +75,7 @@ void cp(char *file_from, char *file_to)
 	if (fd_from == -1)
 		handle_read_error(file_from);
 
-	fd_to = open(file_to, O_RDWR | O_TRUNC | O_CREAT, 0664);
+	fd_to = open(file_to, O_RDWR | O_TRUNC | O_CREAT, permissions);
 
 	if (fd_to == -1)
 		handle_write_error(file_to);

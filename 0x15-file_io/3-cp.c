@@ -73,7 +73,7 @@ void cp(char *file_from, char *file_to)
 	if (fd_from == -1)
 		handle_read_error(file_from);
 
-	fd_to = open(file_to, O_RDWR | O_TRUNC | O_CREAT, 0664);
+	fd_to = open(file_to, O_RDWR | O_TRUNC | O_CREAT, 664);
 
 	if (fd_to == -1)
 		handle_write_error(file_to);

@@ -3,7 +3,7 @@
 In this project, I covered the following concepts
 
 1. File descriptors
-2. System calls
+2. System calls: `read()`, `open()`, `close()`, `write()`
 
 ## Problem set
 

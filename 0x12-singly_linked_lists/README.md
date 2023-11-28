@@ -4,12 +4,14 @@ In this project, I tackle the ALX linked lists tasks. This is in my efforts to l
 
 ## The structure of my linked lists
 
-`typedef struct list_s  
-{  
-    char *str;  
-    unsigned int len;  
-    struct list_s *next;  
-} list_t;`
+```C
+typedef struct list_s
+{
+    char *str;
+    unsigned int len;
+    struct list_s *next;
+} list_t;
+```
 
 ## These are the functions contained in the project's files:
 

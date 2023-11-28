@@ -22,3 +22,7 @@ Starting October, 2023, I undertook the software engineering course offered by A
 14. Singly-linked-lists
 15. Bit manipulation
 16. File I/O
+
+## Main functions
+
+A lot of the problem sets didn't require me to create an entry point to the program, the `main()` function. ALX has an automatic checker that would pull the code from my Github repo and compile with other files (file with main included). The checker would then run these programs and ascertain that they gave the correct outputs.

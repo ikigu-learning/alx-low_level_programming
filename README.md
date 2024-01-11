@@ -2,9 +2,9 @@
 
 A deep dive into low level programming concepts!
 
-Starting October, 2023, I undertook the software engineering course offered by ALX. In the first sprint (Oct to Dec), we mainly covered low-level programming concepts in C. This repository contains my solutions for the problems we were presented.
+Starting October, 2023, I undertook the software engineering course offered by ALX. In the first sprint (Oct to Dec), we mainly covered low-level programming concepts in C. This repository contains my solutions for the problem sets we were presented.
 
-## Concepts learned
+## Concepts covered in C
 
 1. C first statements (Hello World!)
 2. Variables & if...else if...else
@@ -25,4 +25,4 @@ Starting October, 2023, I undertook the software engineering course offered by A
 
 ## Main functions
 
-A lot of the problem sets didn't require me to create an entry point to the program, the `main()` function. ALX has an automatic checker that would pull the code from my Github repo and compile with other files (file with main included). The checker would then run these programs and ascertain that they gave the correct outputs.
+A lot of the problem sets didn't require me to create an entry point to the program, the `main()` function. ALX has an automatic checker that would pull the code from my Github repo and compile with other files needed to create test programs (file with the main included). The checker would then run these programs and ascertain that they gave the correct outputs.

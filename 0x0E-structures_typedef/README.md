@@ -1,1 +1,1 @@
-Learning structures and typedef
+# Structures and typedef

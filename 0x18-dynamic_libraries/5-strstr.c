@@ -1,5 +1,4 @@
 #include "main.h"
-#include "2-strchr.c"
 
 /**
   * _strstr - locates a substring

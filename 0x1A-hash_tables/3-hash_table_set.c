@@ -16,7 +16,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	int value_len = 0;
 
-	if (!key || strlen(key) == 0)
+	if (!key)
 		return (0);
 
 	node = malloc(sizeof(hash_node_t));

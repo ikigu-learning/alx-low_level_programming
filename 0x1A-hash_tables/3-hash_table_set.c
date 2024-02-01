@@ -44,7 +44,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			return (0);
 		}
 
-		node->value = strcpy(node->value, key);
+		node->value = strcpy(node->value, value);
 	}
 	ret_val = insert(ht, node);
 	return (ret_val);
@@ -68,11 +68,14 @@ int insert(hash_table_t *ht, hash_node_t *node)
 	if (ht->array[index] != NULL)
 	{
 		ht->array[index] = node;
+		ht->array[index]->next = NULL;
 		return (0);
 	}
 
 	temp = ht->array[index];
 	ht->array[index] = node;
 	ht->array[index]->next = temp;
+
+	printf("%s\n", ht->array[index]->value);
 	return (0);
 }

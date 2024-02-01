@@ -12,7 +12,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *node;
-	int value_len;
+	int value_len, ret_val;
 
 	if (strlen(key) == 0)
 		return (0);
@@ -46,4 +46,32 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 		node->value = strcpy(node->value, key);
 	}
+	ret_val = insert(ht, node);
+	return (ret_val);
+}
+
+/**
+ * insert - inserts a node into a hash table
+ * @ht: the hash table
+ * @node: the node to insert
+ *
+ * Return: 1 on success; 0 otherwise
+ */
+
+int insert(hash_table_t *ht, hash_node_t *node)
+{
+	hash_node_t *temp;
+
+	unsigned long int index = key_index((unsigned char *)node->key, (*ht).size);
+
+	if (ht->array[index] != NULL)
+	{
+		ht->array[index] = node;
+		return (0);
+	}
+
+	temp = ht->array[index];
+	ht->array[index] = node;
+	ht->array[index]->next = temp;
+	return (0);
 }

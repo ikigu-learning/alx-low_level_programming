@@ -61,8 +61,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 int insert(hash_table_t *ht, hash_node_t *node)
 {
 	hash_node_t *temp;
+	unsigned long int index;
 
-	unsigned long int index = key_index((unsigned char *)node->key, (*ht).size);
+	index = key_index((unsigned char *)node->key, (*ht).size);
 
 	if (ht->array[index] != NULL)
 	{

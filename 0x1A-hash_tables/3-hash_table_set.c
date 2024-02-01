@@ -46,8 +46,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 	}
 
-	index = key_index((unsigned char *)node->key, (*ht).size);
+	index = key_index((unsigned char *)node->key, ht->size);
 	insert(&(ht->array[index]), &node);
+	printf("%s: %s\n", ht->array[index]->key, ht->array[index]->value);
 	return (1);
 }
 
@@ -70,6 +71,17 @@ void insert(hash_node_t **head_addr, hash_node_t **node)
 		*head_addr = *node;
 		(*node)->next = NULL;
 		return;
+	}
+
+	while (head)
+	{
+		if (strcmp(head->key, (*node)->key) == 0)
+		{
+			head->value = (*node)->value;
+			return;
+		}
+
+		head = head->next;
 	}
 
 	temp = head;

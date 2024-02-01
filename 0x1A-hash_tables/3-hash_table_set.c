@@ -75,6 +75,4 @@ void insert(hash_table_t *ht, hash_node_t *node)
 	temp = ht->array[index];
 	ht->array[index] = node;
 	ht->array[index]->next = temp;
-
-	printf("%s\n", ht->array[index]->value);
 }

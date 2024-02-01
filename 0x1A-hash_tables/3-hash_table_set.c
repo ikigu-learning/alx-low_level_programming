@@ -12,6 +12,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *node;
+	unsigned long int index;
 
 	int value_len = 0;
 
@@ -23,7 +24,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!node)
 		return (0);
 
-	node->key = malloc(sizeof(char) * strlen(key));
+	node->key = strdup(key);
 
 	if (!(node->key))
 	{
@@ -31,12 +32,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	}
 
-	node->key = strcpy(node->key, key);
 	value_len = strlen(value);
 
 	if (value && value_len != 0)
 	{
-		node->value = malloc(sizeof(char) * value_len);
+		node->value = strdup(value);
 
 		if (!(node->value))
 		{
@@ -44,38 +44,35 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			free(node);
 			return (0);
 		}
-
-		node->value = strcpy(node->value, value);
 	}
 
-	insert(ht, node);
+	index = key_index((unsigned char *)node->key, (*ht).size);
+	insert(&(ht->array[index]), &node);
 	return (1);
 }
 
 /**
  * insert - inserts a node into a hash table
- * @ht: the hash table
+ * @head_addr: the head ptr to where you're inserting
  * @node: the node to insert
  *
  * Return: Nothing
  */
 
-void insert(hash_table_t *ht, hash_node_t *node)
+void insert(hash_node_t **head_addr, hash_node_t **node)
 {
-	hash_node_t *temp;
-	unsigned long int index;
+	hash_node_t *temp, *head;
 
-	index = key_index((unsigned char *)node->key, (*ht).size);
+	head = *head_addr;
 
-	if (ht->array[index] != NULL)
+	if (head == NULL)
 	{
-		ht->array[index] = node;
-		ht->array[index]->next = NULL;
+		*head_addr = *node;
+		(*node)->next = NULL;
 		return;
 	}
 
-	temp = ht->array[index];
-	ht->array[index] = node;
-	ht->array[index]->next = temp;
-
+	temp = head;
+	*head_addr = *node;
+	(*node)->next = temp;
 }

@@ -1,13 +1,13 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_set - adds an element to the hash table
- * @ht: hash table to add or update the key/value to
- * @key: the key
- * @value: the value associated with the key
- *
- * Return: 1 on success, 0 otherwise
- */
+* hash_table_set - adds an element to the hash table
+* @ht: hash table to add or update the key/value to
+* @key: the key
+* @value: the value associated with the key
+*
+* Return: 1 on success, 0 otherwise
+*/
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
@@ -52,12 +52,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 }
 
 /**
- * insert - inserts a node into a hash table
- * @head_addr: the head ptr to where you're inserting
- * @node: the node to insert
- *
- * Return: Nothing
- */
+* insert - inserts a node into a hash table
+* @head_addr: the head ptr to where you're inserting
+* @node: the node to insert
+*
+* Return: Nothing
+*/
 
 void insert(hash_node_t **head_addr, hash_node_t **node)
 {
@@ -72,18 +72,20 @@ void insert(hash_node_t **head_addr, hash_node_t **node)
 		return;
 	}
 
-	/**
-	 *while (head)
-	 *{
-	 *	if (strcmp(head->key, (*node)->key) == 0)
-	 *	{
-	 *		head->value = (*node)->value;
-	 *		return;
-	 *	}
-	 *
-	 *	head = head->next;
-	 *}
-	*/
+	while (head)
+	{
+		if (strcmp(head->key, (*node)->key) == 0)
+		{
+			free(head->value);
+			head->value = strdup((*node)->value);
+			free((*node)->key);
+			free((*node)->value);
+			free(*node);
+			return;
+		}
+
+		head = head->next;
+	}
 
 	temp = head;
 	*head_addr = *node;

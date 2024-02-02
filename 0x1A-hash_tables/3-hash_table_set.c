@@ -72,22 +72,22 @@ void insert(hash_node_t **head_addr, hash_node_t **node)
 		return;
 	}
 
-	while (head)
-	{
-		if (strcmp(head->key, (*node)->key) == 0)
-		{
-			free(head->value);
-			head->value = strdup((*node)->value);
-			free((*node)->key);
-			free((*node)->value);
-			free(*node);
-			return;
-		}
-
-		head = head->next;
-	}
-
-	temp = head;
-	*head_addr = *node;
-	(*node)->next = temp;
-}
+	/**
+	 * while (head)
+	 * {
+	 * if (strcmp(head->key, (*node)->key) == 0)
+	 * {
+	 * free(head->value);
+	 * head->value = strdup((*node)->value);
+	 * free((*node)->key);
+	 * free((*node)->value);
+	 * free(*node);
+	 * return;
+	 * }
+	 * head = head->next;
+	 * }
+	 * temp = head;
+	 * *head_addr = *node;
+	 * (*node)->next = temp;
+	 * }
+	 */

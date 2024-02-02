@@ -86,8 +86,9 @@ void insert(hash_node_t **head_addr, hash_node_t **node)
 	 * }
 	 * head = head->next;
 	 * }
-	 * temp = head;
-	 * *head_addr = *node;
-	 * (*node)->next = temp;
-	 * }
 	 */
+
+	temp = head;
+	*head_addr = *node;
+	(*node)->next = temp;
+}

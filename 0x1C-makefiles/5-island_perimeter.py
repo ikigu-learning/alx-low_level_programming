@@ -7,46 +7,46 @@ Finds the perimeter of an island, grid.
 
 
 def island_perimeter(grid):
-	"""
-	Finds the perimeter of an island, grid
+    """
+    Finds the perimeter of an island, grid
 
-	Args:
-		grid: a 2D array
+    Args:
+            grid: a 2D array
 
-	Returns:
-		The perimeter of grid
-	"""
+    Returns:
+            The perimeter of grid
+    """
 
-	perimeter = 0
+    perimeter = 0
 
-	if type(grid) != list:
-		return perimeter
-	
-	if len(grid) == 0:
-		return perimeter
+    if type(grid) is not list:
+        return perimeter
 
-	grid_height = len(grid)
-	grid_width = len(grid[0])
+    if len(grid) == 0:
+        return perimeter
 
-	for i in range(0, grid_height):
-		for j in range(0, grid_width):
+    grid_height = len(grid)
+    grid_width = len(grid[0])
 
-			if grid[i][j] == 1:
+    for i in range(0, grid_height):
+        for j in range(0, grid_width):
 
-				# Check above
-				if i == 0 or grid[i - 1][j] == 0:
-					perimeter += 1
+            if grid[i][j] == 1:
 
-				# Check left
-				if j == 0 or grid[i][j -1] == 0:
-					perimeter += 1
+                # Check above
+                if i == 0 or grid[i - 1][j] == 0:
+                    perimeter += 1
 
-				# Check below
-				if i == grid_height - 1 or grid[i + 1][j] == 0:
-					perimeter += 1
+                # Check left
+                if j == 0 or grid[i][j - 1] == 0:
+                    perimeter += 1
 
-				# Check right
-				if j == grid_width - 1 or grid[i][j + 1] == 0:
-					perimeter += 1
+                # Check below
+                if i == grid_height - 1 or grid[i + 1][j] == 0:
+                    perimeter += 1
 
-	return perimeter
+                # Check right
+                if j == grid_width - 1 or grid[i][j + 1] == 0:
+                    perimeter += 1
+
+    return perimeter

@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 
+
 """
 Finds the perimeter of an island, grid.
 """
+
 
 def island_perimeter(grid):
 	"""
@@ -48,4 +50,3 @@ def island_perimeter(grid):
 					perimeter += 1
 
 	return perimeter
-

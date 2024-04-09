@@ -22,6 +22,8 @@ Starting October, 2023, I undertook the software engineering course offered by A
 14. Singly-linked-lists
 15. Bit manipulation
 16. File I/O
+17. Doubly-linked lists
+18. Dynamic libraries
 
 ## Main functions
 
